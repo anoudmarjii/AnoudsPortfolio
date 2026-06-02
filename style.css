@@ -1,0 +1,259 @@
+:root {
+  --dark-blue: #00008b;
+  --green: #66998d;
+  --light-bg: #f8f8f8;
+  --white: #ffffff;
+  --text: #333333;
+  --muted: #666666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, var(--dark-blue), var(--green));
+  color: var(--white);
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%;
+}
+
+.logo {
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #dff5ef;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: 0 8%;
+}
+
+.hero h1 {
+  font-size: 55px;
+  margin: 10px 0;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+}
+
+.tagline {
+  font-weight: bold;
+  color: #e8fff8;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 8px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.primary {
+  background-color: var(--white);
+  color: var(--dark-blue);
+}
+
+.secondary {
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+.section {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.section h2 {
+  color: var(--dark-blue);
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.section p {
+  max-width: 850px;
+  margin: auto;
+  color: var(--muted);
+}
+
+.light {
+  background-color: var(--white);
+}
+
+.skills-grid,
+.projects-grid,
+.services-grid {
+  display: grid;
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.skills-grid {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.skills-grid span {
+  background-color: var(--light-bg);
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: var(--dark-blue);
+  border: 1px solid #ddd;
+}
+
+.projects-grid,
+.services-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.project-card,
+.services-grid div {
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: 0.3s;
+}
+
+.light .services-grid div {
+  background-color: var(--light-bg);
+}
+
+.project-card:hover,
+.services-grid div:hover {
+  transform: translateY(-7px);
+}
+
+.project-card h3,
+.services-grid h3 {
+  color: var(--green);
+  margin-bottom: 10px;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--dark-blue);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+.contact {
+  background: linear-gradient(135deg, var(--green), var(--dark-blue));
+  color: var(--white);
+}
+
+.contact h2,
+.contact p {
+  color: var(--white);
+}
+
+.contact-links {
+  margin-top: 25px;
+}
+
+.contact-links a {
+  display: inline-block;
+  margin: 8px;
+  padding: 12px 22px;
+  background-color: var(--white);
+  color: var(--dark-blue);
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+#topBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+  border: none;
+  background-color: var(--green);
+  color: var(--white);
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#topBtn:hover {
+  background-color: var(--dark-blue);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+}
